@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HTML to Image</title>
+
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+  <link rel="stylesheet" href="./src/styles/base.scss">
+  <link rel="stylesheet" href="./src/styles/main.scss">
+
+  <script type="module" src="./src/scripts/html-to-png.ts"></script>
+</head>
+<body>
+  <main id="image-content">
+    <img src="/logo.png" alt="profile picture">
+    
+    <div>
+      <p class="title">Camille Dugas</p>
+      
+      <p class="description">
+        Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript, 
+        je travaille principalement avec les frameworks React et Next.
+      </p>
+    </div>
+  </main>
+  
+  <button id="download">Download</button>
+  
+  <div id="image-result"></div>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+$padding-x: 25px;
+$border-size: 2px;
+
+$height: 300px;
+$width: ($height * 2) - ($padding-x * 2) - ($border-size * 2);
+
+main {
+  background-color: black;
+
+  height: $height;
+  width: $width;
+
+  padding: 0 $padding-x;
+
+  border: white solid $border-size;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  img {
+    border-radius: 125px;
+    height: 125px;
+  }
+
+  p {
+    margin: 15px 0;
+    color: white;
+
+    &.title {
+      font-size: 1.8rem;
+    }
+  
+    &.description {
+      font-size: 1rem;
+    }
+  }
+}

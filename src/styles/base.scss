@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  font-family: Ubuntu;
+
+  background-color: burlywood;
+  
+  margin: 0;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+button {
+  background-color: black;
+  
+  font-size: 1.2rem;
+  color: white;
+
+  padding: 5px 15px;
+
+  border-radius: 3px;
+
+  &:hover {
+    border: 2px green solid;
+  }
+}
