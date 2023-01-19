@@ -1,5 +1,5 @@
 $padding-x: 25px;
-$border-size: 2px;
+$border-size: 0px;
 
 $height: 300px;
 $width: ($height * 2) - ($padding-x * 2) - ($border-size * 2);
@@ -19,6 +19,10 @@ main {
   justify-content: center;
   gap: 25px;
 
+  position: relative;
+
+  overflow: hidden;
+
   img {
     border-radius: 125px;
     height: 125px;
@@ -33,7 +37,45 @@ main {
     }
   
     &.description {
-      font-size: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .bullets {
+    display: none;
+    $size: 20px;
+
+    span {
+      background-color: white;
+      
+      height: $size * 2;
+      width: $size * 2;
+
+      // border-radius: $size;
+
+      transform: rotate(45deg);
+
+      position: absolute;
+    }
+
+    :nth-child(1) {
+      top: -$size;
+      left: -$size;
+    }
+
+    :nth-child(2) {
+      top: -$size;
+      right: -$size;
+    }
+
+    :nth-child(3) {
+      bottom: -$size;
+      left: -$size;
+    }
+
+    :nth-child(4) {
+      bottom: -$size;
+      right: -$size;
     }
   }
 }
