@@ -19,7 +19,7 @@ body {
 button {
   background-color: black;
   
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
 
   padding: 5px 15px;
@@ -27,6 +27,6 @@ button {
   border-radius: 3px;
 
   &:hover {
-    border: 2px green solid;
+    border: 2px white solid;
   }
 }
