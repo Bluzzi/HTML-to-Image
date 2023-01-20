@@ -3,7 +3,7 @@
 body {
   font-family: Ubuntu;
 
-  background-color: burlywood;
+  background-color: #111111;
   
   margin: 0;
 
@@ -14,6 +14,21 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 40px;
+
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  textarea {
+    background-color: black;
+    color: white;
+    border: 2px white solid;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    resize: none;
+  }
 }
 
 button {

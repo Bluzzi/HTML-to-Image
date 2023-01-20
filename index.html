@@ -14,18 +14,10 @@
   <script type="module" src="./src/scripts/html-to-png.ts"></script>
 </head>
 <body>
-  <main id="image-content">
-    <img src="/logo.png" alt="profile picture">
-    
-    <div>
-      <p class="title">Camille Dugas</p>
-      
-      <p class="description">
-        Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript, 
-        je travaille principalement avec les frameworks React et Next.
-      </p>
-    </div>
-  </main>
+  <h1>Insert your code, and Imagize it!</h1>
+
+  <textarea name="code" id="code" cols="75" rows="20" placeholder="Your code" onchange=""><code style="color: white;">Hey</code><style type="text/css"></style></textarea>
+  <main id="code-preview"></main>
   
   <button id="download">imagize</button>
   
