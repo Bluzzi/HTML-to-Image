@@ -1,15 +1,24 @@
 import html2canvas from "html2canvas";
 
 // Get required elements:
-const downloadButton = document.getElementById("download");
-const imageContent = document.getElementById("image-content");
-const imageResult = document.getElementById("image-result");
+const downloadButton = document.getElementById("download") as HTMLElement;
+const imageResult = document.getElementById("image-result") as HTMLElement;
+const codePreview = document.getElementById("code-preview") as HTMLElement;
+const codeTextarea = document.getElementById("code") as HTMLTextAreaElement;
 
 // Add event listener:
-if (downloadButton && imageContent && imageResult) {
-  downloadButton.addEventListener("click", () => elementToImage(imageContent, imageResult));
-} else {
-  alert("Invalid page");
+if (codeTextarea) {
+  textToElement(codeTextarea.value);
+
+  codeTextarea.addEventListener("input", () => {
+    textToElement(codeTextarea.value);
+  });
+}
+
+if (downloadButton) {
+  downloadButton.addEventListener("click", () => {
+    elementToImage(codePreview, imageResult);
+  });
 }
 
 // Functions:
@@ -19,4 +28,9 @@ export async function elementToImage(element: HTMLElement, destination: HTMLElem
   const image = canvas.toDataURL("image/png");
 
   destination.innerHTML = `<img src="${image}" alt="generated image" />`;
+}
+
+// Elements from a textarea to div
+export function textToElement(text: string) {
+  codePreview.innerHTML = text;
 }
